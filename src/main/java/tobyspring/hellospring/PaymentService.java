@@ -8,7 +8,7 @@ public class PaymentService {
 
     private final ExRateProvider exRateProvider;
 
-    public PaymentService( ExRateProvider exRateProvider){
+    public PaymentService(ExRateProvider exRateProvider){
         this.exRateProvider = exRateProvider;
     }
 
@@ -19,12 +19,12 @@ public class PaymentService {
         LocalDateTime validUntil = LocalDateTime.now().plusMinutes(30);
 
         return new Payment(
-                orderId,
-                currency,
-                foreignCurrencyAmount,
-                exRate,
-                convertedAmount,
-                validUntil
+            orderId,
+            currency,
+            foreignCurrencyAmount,
+            exRate,
+            convertedAmount,
+            validUntil
         );
     }
 }
