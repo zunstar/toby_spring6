@@ -1,25 +1,22 @@
 package tobyspring.hellospring;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import tobyspring.hellospring.exrate.WebApiExRateProvider;
+import tobyspring.hellospring.payment.ExRateProvider;
+import tobyspring.hellospring.payment.PaymentService;
 
 @Configuration
 public class ObjectFactory {
 
     @Bean
     public PaymentService paymentService() {
-        return new PaymentService(cachedExRateProvider());
+        return new PaymentService(exRateProvider());
     }
 
     @Bean
     public ExRateProvider exRateProvider() {
         return new WebApiExRateProvider();
-    }
-
-    @Bean
-    public ExRateProvider cachedExRateProvider() {
-        return new CachedExRateProvider(exRateProvider());
     }
 
 }
