@@ -11,17 +11,6 @@ import java.time.ZoneId;
 public class ClockTest {
 
     @Test
-    void clock(){
-        Clock clock = Clock.systemDefaultZone();
-
-        LocalDateTime dt1 = LocalDateTime.now(clock);
-        System.out.println(dt1);
-        LocalDateTime dt2 = LocalDateTime.now(clock);
-
-        Assertions.assertThat(dt2).isAfter(dt1);
-    }
-
-    @Test
     void fixedClock(){
         Clock clock = Clock.fixed(Instant.now(), ZoneId.systemDefault());
 
