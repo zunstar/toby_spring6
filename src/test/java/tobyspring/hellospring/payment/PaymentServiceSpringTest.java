@@ -8,7 +8,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import tobyspring.hellospring.TestPaymentConfig;
 
-import java.io.IOException;
 import java.time.Clock;
 import java.time.LocalDateTime;
 

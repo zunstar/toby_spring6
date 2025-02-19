@@ -4,11 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.client.JdkClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
-import tobyspring.hellospring.api.ApiTemplate;
-import tobyspring.hellospring.api.ErApiExRateExtractor;
-import tobyspring.hellospring.api.SimpleApiExecutor;
 import tobyspring.hellospring.exrate.RestTemplateExRateProvider;
-import tobyspring.hellospring.exrate.WebApiExRateProvider;
 import tobyspring.hellospring.payment.ExRateProvider;
 import tobyspring.hellospring.payment.PaymentService;
 
