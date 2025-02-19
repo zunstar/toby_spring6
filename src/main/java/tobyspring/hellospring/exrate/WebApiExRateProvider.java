@@ -7,7 +7,6 @@ import java.math.BigDecimal;
 
 public class WebApiExRateProvider implements ExRateProvider {
 
-
     private final ApiTemplate apiTemplate;
 
     public WebApiExRateProvider(ApiTemplate apiTemplate) {
