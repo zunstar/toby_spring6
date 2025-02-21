@@ -1,8 +1,6 @@
 package tobyspring.hellospring.data;
 
 import jakarta.annotation.PostConstruct;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import tobyspring.hellospring.order.Order;
 import tobyspring.hellospring.order.OrderRepository;
@@ -35,5 +33,4 @@ public class JdbcOrderRepository implements OrderRepository {
                 .params(order.getNo(),order.getTotal(),order.getId())
                 .update();
     }
-
 }
